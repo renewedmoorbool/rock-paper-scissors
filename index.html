@@ -7,6 +7,9 @@
     <title>Rock, paper, scissors </title>
 </head>
 <body>
+
+    <p> In order to play go to the console and write out playGame(). </p>
+
     <script>
         function getComputerChoice() {
             const options = ['Rock', 'Paper', 'Scissors'];
@@ -44,6 +47,15 @@
 
             if(playerSelection == 'scissors' && computerSelection == 'paper')
                 console.log("Scissors beat paper. Human wins.");
+        }
+
+        function playGame() {
+            let chosenOption = '';
+
+            for(let i = 0; i < 5; i++) {
+                let chosenOption = prompt("Insert your value: ");
+                singleRound(chosenOption, getComputerChoice());
+            }
         }
     </script>
 </body>
